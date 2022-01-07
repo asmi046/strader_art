@@ -1,28 +1,35 @@
 {
-  "name": "almi",
+  "name": "strader",
   "version": "1.0.0",
-  "description": "Almi Product",
+  "description": "Strader Art",
   "main": "index.php",
   "scripts": {
     "test": "editorconfig-checker",
-    "send_r": "scp -C *.php *.png *.css asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi",
-    "mk_part_carbon": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/template-parts\"",
-    "send_carbon": "npm run mk_part_carbon && scp -C -r carbon-fields asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/carbon-fields",
-    "mk_part_dir": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/template-parts\"",
-    "send_part": "npm run mk_part_dir && scp -C -r template-parts asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/template-parts",
-    "mk_part_img": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/img\"",
-    "send_img": "npm run mk_part_img && scp -C -r img asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/img",
-    "mk_part_js": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/js\"",
-    "send_js": "npm run mk_part_js && scp -C -r js asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/js",
-    "mk_part_css": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/css\"",
-    "send_css": "npm run mk_part_css && scp -C -r css asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/css",
-    "mk_part_fonts": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/almi.asmi-studio.ru/wp-content/themes/Almi/fonts\"",
-    "send_fonts": "npm run mk_part_fonts && scp -C -r fonts asmi046@asmi046.myjino.ru:domains/almi.asmi-studio.ru/wp-content/themes/Almi/fonts",
-    "send_all": "npm run send_r & npm run send_css & npm run send_part & npm run send_img & npm run send_js & npm run send_fonts"
+    "clear_r": "ssh asmi046@asmi046.myjino.ru \"rm domains/strader.asmi-studio.ru/wp-content/themes/strader*.*\"",
+    "send_r": "scp -C *.php *.png *.css asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_ms": "scp -C *.css asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_head": "scp -C header.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_cat": "scp -C category.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_singl": "scp -C single.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_one": "scp -C page.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_index": "scp -C index.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_func": "scp -C functions.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_futt": "scp -C footer.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_filds": "scp -C themes-fields.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_modal": "scp -C modal-win.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_carbon": "scp -C -r carbon-fields asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_part": "scp -C -r template-parts asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_img": "scp -r img asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_images": "scp -r images *.svg asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_js": "scp -r js asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_css": "scp -C -r css asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_fonts": "scp -C -r asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "group_media": "group-css-media-queries css/main.css css/g_main.css",
+    "send_all": "npm run send_r & npm run send_css & npm run send_part & npm run send_img & npm run send_image & npm run send_js & npm run send_fonts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asmi046/almi_wp.git"
+    "url": "git+https://github.com/asmi046/strader_art.git"
   },
   "keywords": [
     "wp",
@@ -31,9 +38,9 @@
   "author": "Asmi-Studio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/asmi046/almi_wp/issues"
+    "url": "https://github.com/asmi046/strader_art/issues"
   },
-  "homepage": "https://github.com/asmi046/almi_wp#readme",
+  "homepage": "https://github.com/asmi046/strader_art#readme",
   "dependencies": {
     "editorconfig-checker": "^3.1.0",
     "group-css-media-queries": "^1.4.1",
